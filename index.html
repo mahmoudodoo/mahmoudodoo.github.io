@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة زفاف محمود ورَهَـفْ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --rose-gold: #b76e79;
+            --ivory: #fffff0;
+            --dusty-rose: #d4a59a;
+            --sage: #b2ac88;
+            --deep-green: #3a5a40;
+            --soft-peach: #f8e5d6;
+        }
+
+        body {
+            font-family: 'El Messiri', 'Scheherazade New', 'Amiri', serif;
+            background: linear-gradient(135deg, var(--soft-peach) 0%, #f0e6e1 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card-container {
+            background-color: var(--ivory);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            padding: 60px 50px;
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+            border: 3px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://i.ibb.co/5KJ3yLm/floral-pattern.png');
+            background-size: 60%;
+            background-repeat: repeat;
+            background-position: center;
+            background-blend-mode: overlay;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.6) 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .decorative-line {
+            width: 70%;
+            height: 2px;
+            background: linear-gradient(to left, transparent, var(--gold), var(--dusty-rose), var(--gold), transparent);
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .decorative-line::before,
+        .decorative-line::after {
+            content: "✧";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--rose-gold);
+            font-size: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        .decorative-line::before {
+            right: -20px;
+        }
+
+        .decorative-line::after {
+            left: -20px;
+        }
+
+        .highlight-text {
+            color: var(--deep-green);
+            font-weight: 700;
+            font-size: 1.3em;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight-text::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-text:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .names {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--deep-green);
+            margin: 40px 0;
+            line-height: 1.3;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .names:hover {
+            transform: scale(1.02);
+            color: #2d3e34;
+        }
+
+        .names::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 20%;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--gold), var(--rose-gold), var(--gold), transparent);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .names:hover::after {
+            width: 80%;
+            left: 10%;
+        }
+
+        .parents-names {
+            font-size: 1.8rem;
+            color: var(--deep-green);
+            margin-bottom: 35px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .location-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 30px;
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            background: linear-gradient(135deg, var(--rose-gold) 0%, var(--gold) 100%);
+            box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .location-link::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--rose-gold) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .location-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(183, 110, 121, 0.4);
+        }
+
+        .location-link:hover::before {
+            opacity: 1;
+        }
+
+        .verse {
+            font-size: 1.7rem;
+            line-height: 2.2;
+            color: #555;
+            margin-bottom: 40px;
+            position: relative;
+            padding: 0 30px;
+            font-weight: 500;
+        }
+
+        .verse::before,
+        .verse::after {
+            content: "❀";
+            color: var(--dusty-rose);
+            font-size: 1.8rem;
+            position: absolute;
+            opacity: 0.8;
+        }
+
+        .verse::before {
+            left: 0;
+            top: 0;
+        }
+
+        .verse::after {
+            right: 0;
+            bottom: 0;
+        }
+
+        .bismillah {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--gold);
+            letter-spacing: 5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .date-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(183, 110, 121, 0.15) 100%);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 350px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .date-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Elegant corner decorations using CSS only */
+        .corner-decoration {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-color: var(--gold);
+            border-style: solid;
+            opacity: 0.5;
+        }
+
+        .top-left-corner {
+            top: 20px;
+            left: 20px;
+            border-width: 3px 0 0 3px;
+            border-radius: 15px 0 0 0;
+        }
+
+        .top-right-corner {
+            top: 20px;
+            right: 20px;
+            border-width: 3px 3px 0 0;
+            border-radius: 0 15px 0 0;
+        }
+
+        .bottom-left-corner {
+            bottom: 20px;
+            left: 20px;
+            border-width: 0 0 3px 3px;
+            border-radius: 0 0 0 15px;
+        }
+
+        .bottom-right-corner {
+            bottom: 20px;
+            right: 20px;
+            border-width: 0 3px 3px 0;
+            border-radius: 0 0 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                padding: 40px 30px;
+                border-radius: 20px;
+                background-size: 80%;
+            }
+
+            .names {
+                font-size: 2.8rem;
+            }
+
+            .parents-names {
+                font-size: 1.5rem;
+            }
+
+            .verse {
+                font-size: 1.4rem;
+                line-height: 2;
+                padding: 0 20px;
+            }
+
+            .bismillah {
+                font-size: 2rem;
+            }
+
+            .date-box {
+                padding: 15px;
+                max-width: 300px;
+            }
+
+            .corner-decoration {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-container {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+
+            .names {
+                font-size: 2.2rem;
+                margin: 30px 0;
+            }
+
+            .verse {
+                font-size: 1.2rem;
+                padding: 0 15px;
+            }
+
+            .bismillah {
+                font-size: 1.8rem;
+                letter-spacing: 3px;
+            }
+
+            .date-box {
+                padding: 12px;
+                max-width: 280px;
+            }
+
+            .location-link {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+
+            .corner-decoration {
+                width: 30px;
+                height: 30px;
+                border-width: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container" id="invitation-card">
+        <!-- Elegant corner decorations using CSS only -->
+        <div class="corner-decoration top-left-corner"></div>
+        <div class="corner-decoration top-right-corner"></div>
+        <div class="corner-decoration bottom-left-corner"></div>
+        <div class="corner-decoration bottom-right-corner"></div>
+        
+        <div class="content-wrapper">
+            <p class="bismillah">بسم الله الرحمن الرحيم</p>
+
+            <p class="verse">
+                وَمِنْ آَيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا
+                <br>
+                إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً
+            </p>
+
+            <div class="decorative-line"></div>
+
+            <p class="parents-names">
+                عودة القضاة &nbsp;&nbsp;&nbsp; و &nbsp;&nbsp;&nbsp; يوسف رمضان
+            </p>
+            <p class="text-xl text-gray-700 mb-6" style="font-size: 1.5rem;">
+                يتشرفان بدعوتكم لحضور حفل زفاف ولديهما:
+            </p>
+
+            <p class="names">
+                محمود &nbsp;&nbsp;&nbsp; و &nbsp;&nbsp;&nbsp; رَهَـفْ
+            </p>
+
+            <div class="decorative-line"></div>
+
+            <div class="date-box">
+                <p class="text-lg text-gray-800">
+                    وذلك عند الساعة <span class="highlight-text">التاسعة</span> من مساء يوم <span class="highlight-text">الاثنين</span>
+                </p>
+                <p class="text-2xl font-bold mt-2 mb-1" style="color: var(--rose-gold);">
+                    ٣٠ / ٦ / ٢٠٢٥
+                </p>
+                <p class="text-lg text-gray-700">
+                    الموافق ٥ ذو الحجة ١٤٤٦
+                </p>
+            </div>
+
+            <p class="text-lg text-gray-800 mt-5 mb-2">
+                في <span class="highlight-text">قاعة The House</span> على طريق المطار
+            </p>
+
+            <a href="https://maps.app.goo.gl/vkF8PacEWZNtx6r16" target="_blank" class="location-link">
+                ✦ رابط الموقع على الخريطة ✦
+            </a>
+        </div>
+    </div>
+</body>
+</html>
