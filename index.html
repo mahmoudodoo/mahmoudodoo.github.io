@@ -32,6 +32,7 @@
             padding: 20px;
             box-sizing: border-box;
             position: relative;
+            font-size: 16px;
         }
 
         /* Network graph background */
@@ -429,15 +430,23 @@
             }
         }
 
-        @media (max-width: 768px) {
+        /* Base font size for better scaling */
+        html {
+            font-size: 16px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            html {
+                font-size: 15px;
+            }
+
             .card-container {
-                padding: 50px 40px;
-                border-radius: 25px;
-                background-size: 70%;
+                padding: 60px 50px;
             }
 
             .names {
-                font-size: 3.2rem;
+                font-size: 3.5rem;
             }
 
             .parents-names {
@@ -445,23 +454,73 @@
             }
 
             .verse {
-                font-size: 1.6rem;
+                font-size: 1.7rem;
                 line-height: 2.2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+
+            .card-container {
+                padding: 50px 40px;
+                border-radius: 25px;
+                background-size: 70%;
+            }
+
+            .names {
+                font-size: 3rem;
+                margin: 35px 0;
+            }
+
+            .parents-names {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+            }
+
+            .verse {
+                font-size: 1.5rem;
+                line-height: 2;
                 padding: 0 30px;
+                margin-bottom: 35px;
             }
 
             .bismillah {
-                font-size: 2.3rem;
+                font-size: 2.2rem;
                 letter-spacing: 6px;
+                margin-bottom: 30px;
             }
 
             .date-box {
                 padding: 20px;
                 max-width: 320px;
+                margin: 30px auto;
+            }
+
+            .date-box-date {
+                font-size: 2.2rem;
+            }
+
+            .decorative-line {
+                margin: 30px auto;
+            }
+
+            .text-xl {
+                font-size: 1.4rem !important;
             }
         }
 
         @media (max-width: 480px) {
+            html {
+                font-size: 13px;
+            }
+
+            body {
+                padding: 15px;
+            }
+
             .card-container {
                 padding: 40px 30px;
                 border-radius: 20px;
@@ -469,31 +528,124 @@
             }
 
             .names {
-                font-size: 2.5rem;
-                margin: 35px 0;
+                font-size: 2.4rem;
+                margin: 30px 0;
+            }
+
+            .parents-names {
+                font-size: 1.4rem;
+                margin-bottom: 25px;
             }
 
             .verse {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
                 padding: 0 20px;
-                line-height: 2;
+                line-height: 1.8;
+                margin-bottom: 30px;
             }
 
             .bismillah {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 letter-spacing: 4px;
+                margin-bottom: 25px;
             }
 
             .date-box {
                 padding: 18px;
                 max-width: 280px;
+                margin: 25px auto;
+            }
+
+            .date-box-date {
+                font-size: 1.8rem;
+            }
+
+            .date-box-text,
+            .date-box-hijri {
+                font-size: 1rem;
             }
 
             .location-link {
                 padding: 12px 28px;
                 font-size: 1rem;
+                margin-top: 25px;
+            }
+
+            .decorative-line {
+                margin: 25px auto;
+            }
+
+            .decorative-line::before,
+            .decorative-line::after {
+                font-size: 1.5rem;
+            }
+
+            .verse::before,
+            .verse::after {
+                font-size: 1.8rem;
+            }
+
+            .text-xl {
+                font-size: 1.2rem !important;
             }
         }
+
+        @media (max-width: 360px) {
+            html {
+                font-size: 12px;
+            }
+
+            .card-container {
+                padding: 35px 25px;
+            }
+
+            .names {
+                font-size: 2.2rem;
+            }
+
+            .verse {
+                font-size: 1.2rem;
+            }
+
+            .bismillah {
+                font-size: 1.6rem;
+            }
+        }
+            /* Add this to your existing styles */
+    .parents-names, .names {
+        white-space: nowrap; /* Prevent wrapping */
+        overflow: hidden; /* Hide any overflow */
+        text-overflow: ellipsis; /* Add ellipsis if text overflows (though it shouldn't with our adjustments) */
+        padding: 0 10px; /* Add some padding to prevent edge cases */
+    }
+
+    /* Adjust the font sizes in your media queries to ensure they fit */
+    @media (max-width: 768px) {
+        .parents-names {
+            font-size: 1.4rem; /* Slightly smaller to fit */
+        }
+        .names {
+            font-size: 2.6rem; /* Slightly smaller to fit */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .parents-names {
+            font-size: 1.2rem; /* Adjusted to fit smallest screens */
+        }
+        .names {
+            font-size: 2rem; /* Adjusted to fit smallest screens */
+        }
+    }
+
+    @media (max-width: 360px) {
+        .parents-names {
+            font-size: 1.1rem; /* Smallest size that keeps names on one line */
+        }
+        .names {
+            font-size: 1.8rem; /* Smallest size that keeps names on one line */
+        }
+    }
     </style>
 </head>
 <body>
